@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container-fluid col-4 shadow p-3 mb-5 bg-white rounded">
+    <div class="logo_div">
+        <img src="~/images/jaizLogo.png" width="100" />
+        <div>...FOR A BETTER LIFE</div>
+    </div>
+    <div class="container">
+        <div class="merchant_details">
+            <h6 class="text-center">****MERCHANT COPY****</h6>
+            <p>MERCHANT NAME:<br />@Model.MerchantName</p>
+            
+            <p>LOCATION:<br />@Model.Location</p>
+            
+            <p>TERMINAL ID: @Model.TerminalId</p>
+        </div>
+        <span>---------------------------------------------------------</span>
+        <h3 class="text-center">PURCHASE</h3>
+        <p>STAN: @Model.Stan</p>
+        <p>DATE/TIME: @Model.Date_time</p>
+        <span>--------------------------------------------------------</span>
+        <p class="fw-bold">AMOUNT:<span class="amount">NGN @Model.Amount</span></p>
+        <span>----------------------------------------------------------</span>
+        <p>Debit Mastercard<br /><h4 class="text-center"> @Model.CardNo</h4></p>
+        
+
+        <p>369/GLOBAL ACCELEREX</p>
+        <p>EXPIRY DATE: @Model.expiryDate</p>
+        <p>AUTHORIZATION CODE: @Model.AuthorizationCode</p>
+        <p>OFFLINE CVM</p>
+
+        <span>----------------------------------------------------------</span>
+        <h3 class="text-center">TRANSACTION DECLINED</h3>
+        <p>RESPONSE CODE:@Model.ResponseCode</p>
+        Issuer or switch inoperative
+        <p>AID: @Model.AID</p>
+        <p>RRN: @Model.RRN</p>
+        Accelerex 2.0.0-090921-LINT
+        <p>PTAD: @Model.PTAD</p>
+        <p>----------------------------------------------------------</p>
+        <p>----------------------------------------------------------</p>
+        <p class="text-center thanks"><i>Thanks for using JAIZ BANK POS</i></p>
+
+    </div>
+   
+    
+
+</div>
